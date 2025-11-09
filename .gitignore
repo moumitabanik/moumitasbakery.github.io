@@ -1,5 +1,6 @@
 .env
 # Local Netlify folder
 .netlify
-# Ignore large video files
-assets/video/cake_making_video_org.mp4
+
+Cakes Listing - Sheet1.csv
+menu_inserts.sql
