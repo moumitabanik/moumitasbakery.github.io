@@ -19,11 +19,6 @@
   </head>
 
   <body class="antialiased">
-    <!-- Full Page Loader -->
-    <div id="page-loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
-      <div class="loader-border-4 border-t-[color:var(--brand-magenta)] border-gray-300 rounded-full w-16 h-16 animate-spin"></div>
-    </div>
-    
     <!-- Navbar -->
     <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-lg border-b border-[rgba(140,25,67,0.15)] shadow-sm transition-all duration-300">
       <nav class="container mx-auto flex justify-between items-center py-[0.5rem] px-6">
@@ -107,26 +102,38 @@
 
       <!-- Category Tabs -->
       <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button class="tab-btn bg-[color:var(--brand-primary)] text-white px-5 py-2 rounded-full" data-category="cakes">
-          Cakes
+        <button class="tab-btn bg-[color:var(--brand-primary)] text-white px-5 py-2 rounded-full" data-category="all cakes">
+          All Cakes
         </button>
         <button
           class="tab-btn bg-[color:var(--brand-yellow)] text-[color:var(--brand-primary)] px-5 py-2 rounded-full"
-          data-category="pastries"
+          data-category="dry cakes"
         >
-          Pastries
+          Dry Cakes
         </button>
         <button
           class="tab-btn bg-[color:var(--brand-yellow)] text-[color:var(--brand-primary)] px-5 py-2 rounded-full"
-          data-category="cupcakes"
+          data-category="celebration cakes"
         >
-          Cupcakes
+          Celebration Cakes
+        </button>
+        <button
+          class="tab-btn bg-[color:var(--brand-yellow)] text-[color:var(--brand-primary)] px-5 py-2 rounded-full"
+          data-category="cup cakes"
+        >
+          Cup Cakes
         </button>
         <button
           class="tab-btn bg-[color:var(--brand-yellow)] text-[color:var(--brand-primary)] px-5 py-2 rounded-full"
           data-category="cookies"
         >
-          Cookies
+          cookies
+        </button>
+        <button
+          class="tab-btn bg-[color:var(--brand-yellow)] text-[color:var(--brand-primary)] px-5 py-2 rounded-full"
+          data-category="mousse cakes"
+        >
+          Mousse Cakes
         </button>
       </div>
 

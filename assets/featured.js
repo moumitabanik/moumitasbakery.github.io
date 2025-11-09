@@ -1,23 +1,35 @@
 async function loadFeatured() {
-    const loader = document.getElementById("page-loader");
+  const grid = document.getElementById("featured-grid");
+
   try {
-    loader.style.display = "flex"; // show loader
+    // Show loader inside the grid
+    grid.innerHTML = `
+      <div class="col-span-3 flex justify-center items-center py-10">
+        <div class="w-10 h-10 border-4 border-[color:var(--brand-magenta)] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    `;
+
     const response = await fetch('/.netlify/functions/getMenu');
     if (!response.ok) throw new Error("Failed to fetch menu");
+
     const menu = await response.json();
 
     // Filter top 3 featured / best sellers
-    // Assuming your data has `featured: true` property
     const featuredItems = menu.filter(item => item.is_featured).slice(0, 3);
 
-    const grid = document.getElementById("featured-grid");
-    grid.innerHTML = "";
+    grid.innerHTML = ""; // clear loader
+
+    if (featuredItems.length === 0) {
+      grid.innerHTML = `<p class="col-span-3 text-gray-600">No featured cakes available right now.</p>`;
+      return;
+    }
 
     featuredItems.forEach(item => {
-      const imagesArray = item.images.split(",");
+      const imagesArray = item.images ? item.images.split(",") : ["/assets/images/placeholder.jpg"];
       const card = document.createElement("a");
       card.href = "menu.html";
-      card.className = "group block bg-gradient-to-b from-white to-[rgba(255,249,250,1)] rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 border border-[rgba(140,25,67,0.1)] hover:-translate-y-2";
+      card.className =
+        "group block bg-gradient-to-b from-white to-[rgba(255,249,250,1)] rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 border border-[rgba(140,25,67,0.1)] hover:-translate-y-2";
 
       card.innerHTML = `
         <div class="overflow-hidden rounded-2xl mb-5">
@@ -34,8 +46,7 @@ async function loadFeatured() {
     });
   } catch (err) {
     console.error("Error loading featured items:", err);
-  } finally {
-    loader.style.display = "none"; // hide loader after data is ready
+    grid.innerHTML = `<p class="col-span-3 text-red-500">Error loading featured cakes. Please try again later.</p>`;
   }
 }
 
