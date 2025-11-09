@@ -1,0 +1,5 @@
+.env
+# Local Netlify folder
+.netlify
+# Ignore large video files
+assets/video/cake_making_video_org.mp4

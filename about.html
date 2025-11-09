@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Moumita's Bakery</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="antialiased">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-lg border-b border-[rgba(140,25,67,0.15)] shadow-sm transition-all duration-300">
+      <nav class="container mx-auto flex justify-between items-center py-[0.5rem] px-6">
+
+        <!-- Logo & Brand -->
+        <a href="index.html" class="flex items-center gap-4 group">
+          <img 
+            src="assets/images/logo.jpg" 
+            alt="Moumita's Bakery logo" 
+            class="h-16 w-16 rounded-full object-cover shadow-md border-2 border-[color:var(--brand-secondary)] transform group-hover:scale-110 transition-transform duration-300" 
+          />
+          <span class="hidden sm:inline-block text-xl font-extrabold text-[color:var(--brand-primary)] tracking-wide group-hover:text-[color:var(--brand-secondary)] transition-colors duration-300">
+            Moumita's Bakery
+          </span>
+        </a>
+
+        <!-- Hamburger -->
+        <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-8 h-6">
+          <span class="block w-full h-[3px] bg-[color:var(--brand-magenta)] rounded transition-all"></span>
+          <span class="block w-full h-[3px] bg-[color:var(--brand-magenta)] rounded transition-all"></span>
+          <span class="block w-full h-[3px] bg-[color:var(--brand-magenta)] rounded transition-all"></span>
+        </button>
+
+        <!-- Desktop Nav -->
+        <ul id="nav-links" class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link text-[color:var(--brand-primary)] font-semibold">About</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-[rgba(140,25,67,0.15)] shadow-lg">
+        <ul class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-800">
+          <li><a href="index.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">About</a></li>
+          <li><a href="menu.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Menu</a></li>
+          <li><a href="testimonials.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Testimonials</a></li>
+          <li><a href="contact.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] flex items-center text-white overflow-hidden mt-16">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0">
+        <img 
+          src="assets/images/story.jpg" 
+          alt="Moumita’s Bakery background" 
+          class="w-full h-full object-cover opacity-80 animate-slowZoom"
+        />
+        <!-- Animated Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[color:var(--brand-primary)]/80 via-[color:var(--brand-magenta)]/60 to-transparent animate-gradientFlow"></div>
+      </div>
+
+      <!-- Content (Left aligned) -->
+      <div class="relative z-10 px-8 md:px-16 max-w-2xl">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-md">
+          Our Story
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+          Baked with passion. Shared with love. Discover the heart behind Moumita’s Bakery.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container mx-auto py-16 px-6 space-y-16">
+
+      <!-- Story -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="rounded-2xl shadow-lg overflow-hidden">
+          <video 
+            src="assets\video\cake_making_video.mp4" 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            class="w-full h-[500px] object-cover rounded-2xl"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-[color:var(--brand-primary)] mb-4">A Passion for Baking</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Moumita’s Bakery began as a dream to bring happiness through the simple joy of a perfectly baked cake.
+            From a small home kitchen to a beloved local brand, we’ve stayed true to our roots: using quality ingredients,
+            time-honored techniques, and a sprinkle of creativity.
+          </p>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Every cake, cookie, and pastry is made by hand, with love and care. Whether it’s a birthday, anniversary,
+            or a just-because treat, our goal is to make every moment a little sweeter.
+          </p>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            What makes us special is our attention to detail — from custom designs to the perfect balance of flavor and texture. We believe that every celebration deserves something unique, crafted with passion and a personal touch. At Moumita’s Bakery, every creation tells a story — one that’s baked fresh and shared with love.
+          </p>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-[color:var(--brand-primary)] mb-8">Our Values</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="brand-card p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-2 text-[color:var(--brand-primary)]">Freshness</h3>
+            <p class="text-gray-600">We bake fresh daily using locally sourced ingredients and pure butter, never shortcuts.</p>
+          </div>
+          <div class="brand-card p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-2 text-[color:var(--brand-primary)]">Creativity</h3>
+            <p class="text-gray-600">Our cakes and desserts are crafted with imagination — from design to flavor.</p>
+          </div>
+          <div class="brand-card p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold mb-2 text-[color:var(--brand-primary)]">Love</h3>
+            <p class="text-gray-600">We believe baking is an act of love — and every bite should feel like a warm hug.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founder -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-[color:var(--brand-primary)] mb-4">Meet Moumita</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Every delightful creation at our bakery begins with Moumita — the creative mind and passionate heart behind it all. 
+            What began as a simple love for baking soon blossomed into a full-time journey of spreading happiness, one cake at a time. 
+            Her custom-themed cakes and signature treats have become local favorites, loved for their taste and artistry alike.
+          </p>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            When she’s not busy whisking up something new, Moumita loves experimenting with fresh flavors 
+            or connecting with customers to make their celebrations extra special. 
+            Her goal is simple — to turn every bite into a moment to remember.
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/founder.jpg" alt="Moumita, Founder of Moumita’s Bakery" class="rounded-2xl shadow-lg object-cover w-full h-[500px]" />
+        </div>
+      </div>
+
+
+    </section>
+
+        <!-- Footer -->
+    <footer class="bg-[color:var(--brand-primary)] text-[color:var(--brand-accent)] py-10 mt-16">
+      <div class="container mx-auto px-6 flex flex-wrap justify-between items-start gap-8">
+        <!-- Quick Links -->
+        <div class="flex flex-col text-center md:text-left">
+          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="index.html" class="relative group hover:text-[color:var(--brand-cream)]">
+                Home
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-cream)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="relative group hover:text-[color:var(--brand-cream)]">
+                About
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="menu.html" class="relative group hover:text-[color:var(--brand-cream)]">
+                Menu
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="relative group hover:text-[color:var(--brand-cream)]">
+                Contact
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="flex flex-col text-center md:text-left">
+          <h4 class="font-semibold text-lg mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="https://maps.app.goo.gl/2jMDuqcCCfPK1K187" target="_blank" class="relative group hover:text-[color:var(--brand-cream)]">
+                Behala, Kolkata
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:moumitasbakery@gmail.com" class="relative group hover:text-[color:var(--brand-cream)]">
+                moumitasbakery@gmail.com
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+917439688236" class="relative group hover:text-[color:var(--brand-cream)]">
+                +91 74396 88236
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="flex flex-col text-center md:text-left">
+          <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="https://www.facebook.com/MoumitasBakery" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6">
+            </a>
+            <a href="https://www.instagram.com/bakerybymoumita" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6">
+            </a>
+            <a href="https://wa.me/c/917439688236" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-6 h-6">
+            </a>
+          </div>
+        </div>
+
+        <!-- Brand -->
+        <div class="flex flex-col items-center md:items-end text-center md:text-right">
+          <img src="assets/images/logo.jpg" alt="Moumita's Bakery logo" class="w-28 h-28 rounded-full mb-4 shadow-lg object-cover">
+          <h3 class="text-2xl font-bold mb-2">Moumita's Bakery</h3>
+          <p class="text-sm opacity-80 max-w-xs">It’s Cake Time! Freshly baked goodness made with love.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-10 border-t border-[rgba(255,255,255,0.2)] pt-6 text-center text-sm opacity-90">
+        © 2025 Moumita's Bakery — All Rights Reserved. 
+      </div>
+    </footer>
+
+
+  </body>
+</html>

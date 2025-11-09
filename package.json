@@ -1,0 +1,15 @@
+{
+  "name": "moumitasbakery.github.io",
+  "version": "1.0.0",
+  "description": "Welcome to Moumita's Bakery website repository! This is the source code for our bakery's online presence where customers can explore our delicious offerings, learn about us, and get in touch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

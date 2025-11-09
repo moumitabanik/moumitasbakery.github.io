@@ -1,0 +1,136 @@
+:root {
+    --brand-primary: #6B3E26;      /* Cocoa Brown */
+    --brand-secondary: #E6B17E;    /* Caramel */
+    --brand-cream: #FFF9F5;        /* Light Warm Beige */
+    --brand-accent: #F4E1D2;       /* Milk Foam */
+    --brand-text: #2E1B0F;         /* Espresso Brown */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--brand-cream);
+    color: var(--brand-text);
+}
+.loader-border-4 {
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #8c1943; /* fallback for Tailwind magenta */
+}
+/* Buttons */
+.brand-btn {
+    background-color: var(--brand-primary);
+    color: var(--brand-accent);
+    transition: all 0.3s ease;
+    border: 1px solid var(--brand-secondary);
+}
+
+.brand-btn:hover {
+    background-color: var(--brand-secondary);
+    color: var(--brand-text);
+    transform: scale(1.05);
+}
+
+/* Navbar Links */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    color: var(--brand-text);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--brand-secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--brand-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.transition-none {
+    transition: none !important;
+}
+
+/* ✨ Directional animations */
+.fade-up, .fade-left, .fade-right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.9s ease-out;
+}
+
+.fade-left {
+    transform: translateX(-40px);
+}
+
+.fade-right {
+    transform: translateX(40px);
+}
+
+.active-slide .fade-up,
+.active-slide .fade-left,
+.active-slide .fade-right {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Slider dots */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--brand-secondary);
+    transform: scale(1.3);
+}
+
+/* Gradient banner or sections */
+.brand-gradient {
+    background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+}
+
+/* Cards */
+.brand-card {
+    border: 1px solid rgba(107, 62, 38, 0.08);
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.menu-card {
+    background: white;
+    border: 1px solid rgba(107, 62, 38, 0.08);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(107, 62, 38, 0.1);
+}
+
+/* General link hover */
+a:hover {
+    color: var(--brand-primary);
+}
+/* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
