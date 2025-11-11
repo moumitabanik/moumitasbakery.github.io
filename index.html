@@ -1,401 +1,379 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Moumita's Bakery | It's Cake Time!</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moumita's Bakery | It's Cake Time!</title>
 
-      <!-- Tailwind CSS -->
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script defer src="assets/script.js"></script>
-      <script defer src="assets/featured.js"></script>
-      <script defer src="assets/newly.js"></script>
-      <link rel="stylesheet" href="assets/css/style.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/script.js"></script>
+    <script defer src="assets/featured.js"></script>
+    <script defer src="assets/newly.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    </head>
+  </head>
 
-    <body class="antialiased">
-      <!-- Full Page Loader
-      <div id="page-loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
-        <div class="loader-border-4 border-t-[color:var(--brand-magenta)] border-gray-300 rounded-full w-16 h-16 animate-spin"></div>
-      </div> -->
-      <!-- Navbar -->
-      <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-lg border-b border-[rgba(140,25,67,0.15)] shadow-sm transition-all duration-300">
-        <nav class="container mx-auto flex justify-between items-center py-[0.5rem] px-6">
+  <body class="antialiased">
+    <!-- Full Page Loader
+    <div id="page-loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+      <div class="loader-border-4 border-t-[color:var(--brand-primary)] border-gray-300 rounded-full w-16 h-16 animate-spin"></div>
+    </div> -->
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-lg border-b border-[rgba(140,25,67,0.15)] shadow-sm transition-all duration-300">
+      <nav class="container mx-auto flex justify-between items-center py-[0.5rem] px-6">
 
-          <!-- Logo & Brand -->
-          <a href="index.html" class="flex items-center gap-4 group">
-            <img 
-              src="assets/images/logo.jpg" 
-              alt="Moumita's Bakery logo" 
-              class="h-16 w-16 rounded-full object-cover shadow-md border-2 border-[color:var(--brand-secondary)] transform group-hover:scale-110 transition-transform duration-300" 
-            />
-            <span class="hidden sm:inline-block text-xl font-extrabold text-[color:var(--brand-primary)] tracking-wide group-hover:text-[color:var(--brand-secondary)] transition-colors duration-300">
-              Moumita's Bakery
-            </span>
-          </a>
+        <!-- Logo & Brand -->
+        <a href="index.html" class="flex items-center gap-4 group">
+          <img 
+            src="assets/images/logo1.png" 
+            alt="Moumita's Bakery logo" 
+            class="h-16 w-auto rounded-md object-cover shadow-md border-2 border-[color:var(--brand-secondary)] transform group-hover:scale-110 transition-transform duration-300" 
+          />
+          <!-- <span class="hidden sm:inline-block text-xl font-extrabold text-[color:var(--brand-primary)] tracking-wide group-hover:text-[color:var(--brand-secondary)] transition-colors duration-300">
+            Moumita's Bakery
+          </span> -->
+        </a>
 
-          <!-- Hamburger -->
-          <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-8 h-6">
-            <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
-            <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
-            <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
-          </button>
+        <!-- Hamburger -->
+        <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-8 h-6">
+          <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
+          <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
+          <span class="block w-full h-[3px] bg-[color:var(--brand-primary)] rounded transition-all"></span>
+        </button>
 
-          <!-- Desktop Nav -->
-          <ul id="nav-links" class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-            <li><a href="index.html" class="nav-link text-[color:var(--brand-primary)] font-semibold">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="menu.html" class="nav-link">Menu</a></li>
-            <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <!-- Desktop Nav -->
+        <ul id="nav-links" class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+          <li><a href="index.html" class="nav-link text-[color:var(--brand-primary)] font-semibold">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-[rgba(140,25,67,0.15)] shadow-lg">
+        <ul class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-800">
+          <li><a href="index.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[color:var(--brand-primary)] transition-colors">About</a></li>
+          <li><a href="menu.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Menu</a></li>
+          <li><a href="testimonials.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Testimonials</a></li>
+          <li><a href="contact.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- HERO SLIDER -->
+    <section class="relative mt-16 overflow-hidden">
+      <div id="slider-track" class="flex transition-transform duration-700 ease-in-out">
+        
+        <!-- Slide 1 -->
+        <div class="slide min-w-full h-[80vh] relative">
+          <img src="assets/images/slide1.jpg" class="w-full h-full object-cover" alt="Freshly baked cakes" />
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-up">
+            <h1 class="text-5xl font-bold mb-4">Baked Fresh, Just for You</h1>
+            <p class="max-w-xl mb-6">Delicious cakes, cookies, and pastries made daily with love and the finest ingredients.</p>
+            <a href="menu.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Explore Menu</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide min-w-full h-[80vh] relative">
+          <img src="assets/images/slide2.png" class="w-full h-full object-cover" alt="Custom celebration cakes" />
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-left">
+            <h1 class="text-5xl font-bold mb-4">Celebrate Every Moment</h1>
+            <p class="max-w-xl mb-6">From birthdays to weddings — our custom cakes make your day extra special.</p>
+            <a href="menu.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Order Now</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide min-w-full h-[80vh] relative">
+          <img src="assets/images/slide3.jpeg" class="w-full h-full object-cover" alt="Cupcakes and pastries" />
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-right">
+            <h1 class="text-5xl font-bold mb-4">A Little Treat for Every Craving</h1>
+            <p class="max-w-xl mb-6">Cupcakes, brownies, cookies — sweet bites for every taste and occasion.</p>
+            <a href="about.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Discover Our Story</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dots -->
+      <div id="slider-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10"></div>
+    </section>
+    <!-- Featured Section -->
+    <section class="container mx-auto py-20 px-6 text-center">
+      <h2 class="text-4xl font-extrabold text-[color:var(--brand-primary)] mb-6">Our Best Sellers</h2>
+      <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
+        Indulge in our most-loved creations — soft sponges, rich frostings, and unforgettable flavors.
+      </p>
+
+      <div id="featured-grid" class="grid md:grid-cols-3 gap-10">
+        <!-- Featured cards will be injected here dynamically -->
+      </div>
+    </section>
+
+    <!-- Newly Launched Cakes Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-yellow-50 to-pink-50 text-center">
+      <h2 class="text-4xl font-extrabold text-[color:var(--brand-primary)] mb-6">Newly Launched Cakes</h2>
+      <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
+        Discover our latest delicious creations — freshly crafted to delight your taste buds.
+      </p>
+
+      <div id="new-cakes-grid" class="grid md:grid-cols-3 gap-10"></div>
+
+    </section>
+    <!-- Categories Section -->
+    <section class="py-20 px-6 bg-gradient-to-r from-pink-50 via-white to-yellow-50 text-center">
+      <h2 class="text-4xl font-extrabold text-[color:var(--brand-primary)] mb-6">Our Categories</h2>
+      <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
+        Explore the variety of cakes and treats we offer, made fresh and with love.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-start">
+        <!-- Category Card -->
+        <a href="menu.html#dry-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+          <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-pink-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <img src="assets\images\dry cakes.jpg" alt="Dry Cakes" class="w-20 h-20 object-cover rounded-full">
+          </div>
+          <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Dry Cakes</h3>
+        </a>
+
+        <a href="menu.html#celebration-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+          <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-yellow-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <img src="assets\images\celebration_cake.jpg" alt="Celebration Cakes" class="w-20 h-20 object-cover rounded-full">
+          </div>
+          <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Celebration Cakes</h3>
+        </a>
+
+        <a href="menu.html#cup-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+          <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-green-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <img src="assets\images\cup_cakes.jpg" alt="Cup Cakes" class="w-20 h-20 object-cover rounded-full">
+          </div>
+          <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Cup Cakes</h3>
+        </a>
+
+        <a href="menu.html#cookies" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+          <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-purple-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <img src="assets\images\cookies.jpg" alt="Cookies" class="w-20 h-20 object-cover rounded-full">
+          </div>
+          <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Cookies</h3>
+        </a>
+
+        <a href="menu.html#mousse-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+          <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <img src="assets\images\moouse_cake.jpg" alt="Mousse Cakes" class="w-20 h-20 object-cover rounded-full">
+          </div>
+          <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Mousse Cakes</h3>
+        </a>
+      </div>
+    </section>
+    <!-- Bakery Features Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-pink-50 to-white text-center">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+        
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center space-y-4">
+          <div class="bg-[color:var(--brand-primary)] w-20 h-20 flex items-center justify-center rounded-full">
+            <img src="assets\icons\quality.png" alt="Top Quality" class="w-16 h-16">
+          </div>
+          <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Top Quality</h3>
+          <p class="text-gray-600 max-w-xs">Freshly baked cakes, cookies, and pastries made with the finest ingredients.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center space-y-4">
+          <div class="bg-[color:var(--brand-primary)] w-20 h-20 flex items-center justify-center rounded-full">
+            <img src="assets\icons\offers.png" alt="Great Offers" class="w-16 h-16">
+          </div>
+          <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Great Offers</h3>
+          <p class="text-gray-600 max-w-xs">Enjoy seasonal discounts, combo deals, and special promotions on your favorite treats.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center space-y-4">
+          <div class="bg-[color:var(--brand-primary)] w-20 h-20 flex items-center justify-center rounded-full">
+            <img src="assets\icons\payment.png" alt="Online Payments" class="w-16 h-16">
+          </div>
+          <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Easy Online Payments</h3>
+          <p class="text-gray-600 max-w-xs">Order your favorite cakes hassle-free and pay securely online, anytime, anywhere.</p>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[color:var(--brand-primary)] text-[color:var(--brand-accent)] py-10 mt-16">
+      <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Quick Links -->
+        <div class="text-center sm:text-left">
+          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="relative group hover:text-[color:var(--brand-cream)]">Home
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-cream)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="about.html" class="relative group hover:text-[color:var(--brand-cream)]">About
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="menu.html" class="relative group hover:text-[color:var(--brand-cream)]">Menu
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="testimonials.html" class="relative group hover:text-[color:var(--brand-cream)]">Testimonials
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="contact.html" class="relative group hover:text-[color:var(--brand-cream)]">Contact
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
           </ul>
-        </nav>
+        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-[rgba(140,25,67,0.15)] shadow-lg">
-          <ul class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-800">
-            <li><a href="index.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Home</a></li>
-            <li><a href="about.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">About</a></li>
-            <li><a href="menu.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Menu</a></li>
-            <li><a href="testimonials.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Testimonials</a></li>
-            <li><a href="contact.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Contact</a></li>
+        <!-- Contact Info -->
+        <div class="text-center sm:text-left">
+          <h4 class="font-semibold text-lg mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://maps.app.goo.gl/2jMDuqcCCfPK1K187" target="_blank" class="relative group hover:text-[color:var(--brand-cream)]">
+              Behala, Kolkata
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="mailto:moumitasbakery@gmail.com" class="relative group hover:text-[color:var(--brand-cream)]">
+              moumitasbakery@gmail.com
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="tel:+917439688236" class="relative group hover:text-[color:var(--brand-cream)]">
+              +91 74396 88236
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
           </ul>
         </div>
-      </header>
-      <!-- HERO SLIDER -->
-      <section class="relative mt-16 overflow-hidden">
-        <div id="slider-track" class="flex transition-transform duration-700 ease-in-out">
-          
-          <!-- Slide 1 -->
-          <div class="slide min-w-full h-[80vh] relative">
-            <img src="assets/images/slide1.jpg" class="w-full h-full object-cover" alt="Freshly baked cakes" />
-            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-up">
-              <h1 class="text-5xl font-bold mb-4">Baked Fresh, Just for You</h1>
-              <p class="max-w-xl mb-6">Delicious cakes, cookies, and pastries made daily with love and the finest ingredients.</p>
-              <a href="menu.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Explore Menu</a>
-            </div>
-          </div>
 
-          <!-- Slide 2 -->
-          <div class="slide min-w-full h-[80vh] relative">
-            <img src="assets/images/slide2.png" class="w-full h-full object-cover" alt="Custom celebration cakes" />
-            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-left">
-              <h1 class="text-5xl font-bold mb-4">Celebrate Every Moment</h1>
-              <p class="max-w-xl mb-6">From birthdays to weddings — our custom cakes make your day extra special.</p>
-              <a href="menu.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Order Now</a>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="slide min-w-full h-[80vh] relative">
-            <img src="assets/images/slide3.jpeg" class="w-full h-full object-cover" alt="Cupcakes and pastries" />
-            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-right">
-              <h1 class="text-5xl font-bold mb-4">A Little Treat for Every Craving</h1>
-              <p class="max-w-xl mb-6">Cupcakes, brownies, cookies — sweet bites for every taste and occasion.</p>
-              <a href="about.html" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Discover Our Story</a>
-            </div>
+        <!-- Follow Us -->
+        <div class="text-center sm:text-left">
+          <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+          <div class="flex justify-center sm:justify-start gap-4">
+            <a href="https://www.facebook.com/MoumitasBakery" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/facebook.svg" alt="Facebook" class="w-9 h-9">
+            </a>
+            <a href="https://www.instagram.com/bakerybymoumita" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/instagram.svg" alt="Instagram" class="w-9 h-9">
+            </a>
+            <a href="https://wa.me/917439688236" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-9 h-9">
+            </a>
           </div>
         </div>
-        <!-- Dots -->
-        <div id="slider-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10"></div>
-      </section>
-      <!-- Featured Section -->
-      <section class="container mx-auto py-20 px-6 text-center">
-        <h2 class="text-4xl font-extrabold text-[color:var(--brand-magenta)] mb-6">Our Best Sellers</h2>
-        <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
-          Indulge in our most-loved creations — soft sponges, rich frostings, and unforgettable flavors.
-        </p>
 
-        <div id="featured-grid" class="grid md:grid-cols-3 gap-10">
-          <!-- Featured cards will be injected here dynamically -->
-        </div>
-      </section>
-
-      <!-- Newly Launched Cakes Section -->
-      <section class="py-20 px-6 bg-gradient-to-b from-yellow-50 to-pink-50 text-center">
-        <h2 class="text-4xl font-extrabold text-[color:var(--brand-magenta)] mb-6">Newly Launched Cakes</h2>
-        <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
-          Discover our latest delicious creations — freshly crafted to delight your taste buds.
-        </p>
-
-        <div id="new-cakes-grid" class="grid md:grid-cols-3 gap-10"></div>
-
-      </section>
-      <!-- Categories Section -->
-      <section class="py-20 px-6 bg-gradient-to-r from-pink-50 via-white to-yellow-50 text-center">
-        <h2 class="text-4xl font-extrabold text-[color:var(--brand-magenta)] mb-6">Our Categories</h2>
-        <p class="max-w-2xl mx-auto mb-12 text-gray-700 text-lg">
-          Explore the variety of cakes and treats we offer, made fresh and with love.
-        </p>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-start">
-          <!-- Category Card -->
-          <a href="menu.html#dry-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
-            <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-pink-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
-              <img src="assets\images\dry cakes.jpg" alt="Dry Cakes" class="w-20 h-20 object-cover rounded-full">
-            </div>
-            <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Dry Cakes</h3>
-          </a>
-
-          <a href="menu.html#celebration-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
-            <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-yellow-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
-              <img src="assets\images\celebration_cake.jpg" alt="Celebration Cakes" class="w-20 h-20 object-cover rounded-full">
-            </div>
-            <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Celebration Cakes</h3>
-          </a>
-
-          <a href="menu.html#cup-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
-            <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-green-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
-              <img src="assets\images\cup_cakes.jpg" alt="Cup Cakes" class="w-20 h-20 object-cover rounded-full">
-            </div>
-            <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Cup Cakes</h3>
-          </a>
-
-          <a href="menu.html#cookies" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
-            <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-purple-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
-              <img src="assets\images\cookies.jpg" alt="Cookies" class="w-20 h-20 object-cover rounded-full">
-            </div>
-            <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Cookies</h3>
-          </a>
-
-          <a href="menu.html#mousse-cakes" class="group flex flex-col items-center bg-white rounded-[50px] p-6 shadow-lg transform transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
-            <div class="w-24 h-24 mb-4 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
-              <img src="assets\images\moouse_cake.jpg" alt="Mousse Cakes" class="w-20 h-20 object-cover rounded-full">
-            </div>
-            <h3 class="font-semibold text-lg group-hover:text-[color:var(--brand-secondary)] transition-colors">Mousse Cakes</h3>
-          </a>
-        </div>
-      </section>
-      <!-- Bakery Features Section -->
-      <section class="py-20 px-6 bg-gradient-to-b from-pink-50 to-white text-center">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          
-          <!-- Feature 1 -->
-          <div class="flex flex-col items-center space-y-4">
-            <div class="bg-[color:var(--brand-magenta)] w-20 h-20 flex items-center justify-center rounded-full">
-              <img src="assets\icons\quality.png" alt="Top Quality" class="w-16 h-16">
-            </div>
-            <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Top Quality</h3>
-            <p class="text-gray-600 max-w-xs">Freshly baked cakes, cookies, and pastries made with the finest ingredients.</p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="flex flex-col items-center space-y-4">
-            <div class="bg-[color:var(--brand-magenta)] w-20 h-20 flex items-center justify-center rounded-full">
-              <img src="assets\icons\offers.png" alt="Great Offers" class="w-16 h-16">
-            </div>
-            <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Great Offers</h3>
-            <p class="text-gray-600 max-w-xs">Enjoy seasonal discounts, combo deals, and special promotions on your favorite treats.</p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="flex flex-col items-center space-y-4">
-            <div class="bg-[color:var(--brand-magenta)] w-20 h-20 flex items-center justify-center rounded-full">
-              <img src="assets\icons\payment.png" alt="Online Payments" class="w-16 h-16">
-            </div>
-            <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">Easy Online Payments</h3>
-            <p class="text-gray-600 max-w-xs">Order your favorite cakes hassle-free and pay securely online, anytime, anywhere.</p>
-          </div>
-
-
-        </div>
-      </section>
-
-
-      <!-- Footer -->
-      <footer class="bg-[color:var(--brand-primary)] text-[color:var(--brand-accent)] py-10">
-        <div class="container mx-auto px-6 flex flex-wrap justify-between items-start gap-8">
-          <!-- Quick Links -->
-          <div class="flex flex-col text-center md:text-left">
-            <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a href="index.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                  Home
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-cream)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="about.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                  About
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="menu.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                  Menu
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="contact.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                  Contact
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="flex flex-col text-center md:text-left">
-            <h4 class="font-semibold text-lg mb-4">Contact</h4>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a href="https://maps.app.goo.gl/2jMDuqcCCfPK1K187" target="_blank" class="relative group hover:text-[color:var(--brand-cream)]">
-                  Behala, Kolkata
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:moumitasbakery@gmail.com" class="relative group hover:text-[color:var(--brand-cream)]">
-                  moumitasbakery@gmail.com
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:+917439688236" class="relative group hover:text-[color:var(--brand-cream)]">
-                  +91 74396 88236
-                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Follow Us -->
-          <div class="flex flex-col text-center md:text-left">
-            <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
-            <div class="flex gap-4 justify-center md:justify-start">
-              <a href="https://www.facebook.com/MoumitasBakery" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="assets/icons/facebook.svg" alt="Facebook" class="w-10 h-10">
-              </a>
-              <a href="https://www.instagram.com/bakerybymoumita" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="assets/icons/instagram.svg" alt="Instagram" class="w-10 h-10">
-              </a>
-              <a href="https://wa.me/c/917439688236" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-10 h-10">
-              </a>
-            </div>
-          </div>
-
-          <!-- Brand -->
-          <div class="flex flex-col items-center md:items-end text-center md:text-right">
-            <img src="assets/images/logo.jpg" alt="Moumita's Bakery logo" class="w-28 h-28 rounded-full mb-4 shadow-lg object-cover">
-            <h3 class="text-2xl font-bold mb-2">Moumita's Bakery</h3>
-            <p class="text-sm opacity-80 max-w-xs">It’s Cake Time! Freshly baked goodness made with love.</p>
-          </div>
-
+        <!-- Brand -->
+        <div class="flex flex-col items-center lg:items-end text-center lg:text-right">
+          <img src="assets/images/logo.jpg" alt="Moumita's Bakery logo" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover">
+          <h3 class="text-2xl font-bold mb-2">Moumita's Bakery</h3>
+          <p class="text-sm opacity-80 max-w-xs">It’s Cake Time! Freshly baked goodness made with love.</p>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="mt-10 border-t border-[rgba(255,255,255,0.2)] pt-6 text-center text-sm opacity-90">
-          © 2025 Moumita's Bakery — All Rights Reserved. 
-        </div>
-      </footer>
+      </div>
 
-    </body>
-  </html>
+      <!-- Bottom Bar -->
+      <div class="mt-10 border-t border-[rgba(255,255,255,0.2)] pt-6 text-center text-sm opacity-90">
+        © 2025 Moumita's Bakery — All Rights Reserved.
+      </div>
+    </footer>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sliderTrack = document.getElementById("slider-track");
-    const slides = document.querySelectorAll(".slide");
-    const totalSlides = slides.length;
-    const dotsContainer = document.getElementById("slider-dots");
+  </body>
+</html>
 
-    let currentSlide = 0;
-    let isTransitioning = false;
-    let startX = 0;
-    let currentX = 0;
-    let isDragging = false;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderTrack = document.getElementById("slider-track");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  const dotsContainer = document.getElementById("slider-dots");
 
-    // --- Create dot indicators ---
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement("div");
-      dot.classList.add("dot");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-    const dots = document.querySelectorAll(".dot");
+  let currentSlide = 0;
+  let isTransitioning = false;
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
 
-    // --- Update Slider ---
-    function updateSlider() {
-      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-      slides.forEach((slide, i) => slide.classList.toggle("active-slide", i === currentSlide));
-      dots.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
-    }
+  // --- Create dot indicators ---
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+  const dots = document.querySelectorAll(".dot");
 
-    // --- Next / Prev Slide ---
-    function nextSlide() {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlider();
-      setTimeout(() => (isTransitioning = false), 700);
-    }
+  // --- Update Slider ---
+  function updateSlider() {
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    slides.forEach((slide, i) => slide.classList.toggle("active-slide", i === currentSlide));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
+  }
 
-    function prevSlide() {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlider();
-      setTimeout(() => (isTransitioning = false), 700);
-    }
-
-    function goToSlide(index) {
-      currentSlide = index;
-      updateSlider();
-    }
-
-    // --- Swipe / Drag Support ---
-    sliderTrack.addEventListener("mousedown", startDrag);
-    sliderTrack.addEventListener("touchstart", startDrag);
-    sliderTrack.addEventListener("mousemove", drag);
-    sliderTrack.addEventListener("touchmove", drag);
-    sliderTrack.addEventListener("mouseup", endDrag);
-    sliderTrack.addEventListener("mouseleave", endDrag);
-    sliderTrack.addEventListener("touchend", endDrag);
-
-    function startDrag(e) {
-      isDragging = true;
-      startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
-      sliderTrack.style.transition = "none";
-    }
-
-    function drag(e) {
-      if (!isDragging) return;
-      currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
-      const diff = currentX - startX;
-      sliderTrack.style.transform = `translateX(calc(-${currentSlide * 100}% + ${diff}px))`;
-    }
-
-    function endDrag(e) {
-      if (!isDragging) return;
-      isDragging = false;
-      sliderTrack.style.transition = "transform 0.7s ease-in-out";
-      const diff = (e.type.includes("touch") ? e.changedTouches[0].clientX : e.clientX) - startX;
-
-      if (Math.abs(diff) > 80) {
-        diff > 0 ? prevSlide() : nextSlide();
-      } else {
-        updateSlider();
-      }
-    }
-
-    // --- Auto Slide ---
-    let autoSlide = setInterval(nextSlide, 5000);
-    function resetAutoSlide() {
-      clearInterval(autoSlide);
-      autoSlide = setInterval(nextSlide, 5000);
-    }
-
-    sliderTrack.addEventListener("mousedown", resetAutoSlide);
-    sliderTrack.addEventListener("touchstart", resetAutoSlide);
-
-    // --- Initialize ---
+  // --- Next / Prev Slide ---
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider();
-  });
-  </script>
+    setTimeout(() => (isTransitioning = false), 700);
+  }
+
+  function prevSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+    setTimeout(() => (isTransitioning = false), 700);
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+
+  // --- Swipe / Drag Support ---
+  sliderTrack.addEventListener("mousedown", startDrag);
+  sliderTrack.addEventListener("touchstart", startDrag);
+  sliderTrack.addEventListener("mousemove", drag);
+  sliderTrack.addEventListener("touchmove", drag);
+  sliderTrack.addEventListener("mouseup", endDrag);
+  sliderTrack.addEventListener("mouseleave", endDrag);
+  sliderTrack.addEventListener("touchend", endDrag);
+
+  function startDrag(e) {
+    isDragging = true;
+    startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    sliderTrack.style.transition = "none";
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+    currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    const diff = currentX - startX;
+    sliderTrack.style.transform = `translateX(calc(-${currentSlide * 100}% + ${diff}px))`;
+  }
+
+  function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    sliderTrack.style.transition = "transform 0.7s ease-in-out";
+    const diff = (e.type.includes("touch") ? e.changedTouches[0].clientX : e.clientX) - startX;
+
+    if (Math.abs(diff) > 80) {
+      diff > 0 ? prevSlide() : nextSlide();
+    } else {
+      updateSlider();
+    }
+  }
+
+  // --- Auto Slide ---
+  let autoSlide = setInterval(nextSlide, 5000);
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, 5000);
+  }
+
+  sliderTrack.addEventListener("mousedown", resetAutoSlide);
+  sliderTrack.addEventListener("touchstart", resetAutoSlide);
+
+  // --- Initialize ---
+  updateSlider();
+});
+</script>
 

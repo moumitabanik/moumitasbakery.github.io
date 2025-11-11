@@ -19,16 +19,16 @@
       <nav class="container mx-auto flex justify-between items-center py-[0.5rem] px-6">
 
         <!-- Logo & Brand -->
-        <a href="index.html" class="flex items-center gap-4 group">
-          <img 
-            src="assets/images/logo.jpg" 
-            alt="Moumita's Bakery logo" 
-            class="h-16 w-16 rounded-full object-cover shadow-md border-2 border-[color:var(--brand-secondary)] transform group-hover:scale-110 transition-transform duration-300" 
-          />
-          <span class="hidden sm:inline-block text-xl font-extrabold text-[color:var(--brand-primary)] tracking-wide group-hover:text-[color:var(--brand-secondary)] transition-colors duration-300">
-            Moumita's Bakery
-          </span>
-        </a>
+          <a href="index.html" class="flex items-center gap-4 group">
+            <img 
+              src="assets/images/logo1.png" 
+              alt="Moumita's Bakery logo" 
+              class="h-16 w-auto rounded-md object-cover shadow-md border-2 border-[color:var(--brand-secondary)] transform group-hover:scale-110 transition-transform duration-300" 
+            />
+            <!-- <span class="hidden sm:inline-block text-xl font-extrabold text-[color:var(--brand-primary)] tracking-wide group-hover:text-[color:var(--brand-secondary)] transition-colors duration-300">
+              Moumita's Bakery
+            </span> -->
+          </a>
 
         <!-- Hamburger -->
         <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-8 h-6">
@@ -50,11 +50,11 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-[rgba(140,25,67,0.15)] shadow-lg">
         <ul class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-800">
-          <li><a href="index.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Home</a></li>
-          <li><a href="about.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">About</a></li>
-          <li><a href="menu.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Menu</a></li>
-          <li><a href="testimonials.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Testimonials</a></li>
-          <li><a href="contact.html" class="hover:text-[color:var(--brand-magenta)] transition-colors">Contact</a></li>
+          <li><a href="index.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[color:var(--brand-primary)] transition-colors">About</a></li>
+          <li><a href="menu.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Menu</a></li>
+          <li><a href="testimonials.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Testimonials</a></li>
+          <li><a href="contact.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -69,7 +69,7 @@
           class="w-full h-full object-cover opacity-80 animate-slowZoom"
         />
         <!-- Animated Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[color:var(--brand-primary)]/80 via-[color:var(--brand-magenta)]/60 to-transparent animate-gradientFlow"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[color:var(--brand-primary)]/80 via-[color:var(--brand-primary)]/60 to-transparent animate-gradientFlow"></div>
       </div>
 
       <!-- Content (Left aligned) -->
@@ -140,7 +140,7 @@
       <!-- Founder -->
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="text-3xl font-bold text-[color:var(--brand-primary)] mb-4">Meet Moumita</h2>
+          <h2 class="text-3xl font-bold text-[color:var(--brand-primary)] mb-4">Meet Moumita Banik</h2>
           <p class="text-gray-700 leading-relaxed">
             Every delightful creation at our bakery begins with Moumita — the creative mind and passionate heart behind it all. 
             What began as a simple love for baking soon blossomed into a full-time journey of spreading happiness, one cake at a time. 
@@ -160,84 +160,62 @@
 
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-[color:var(--brand-primary)] text-[color:var(--brand-accent)] py-10 mt-16">
-      <div class="container mx-auto px-6 flex flex-wrap justify-between items-start gap-8">
+      <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        
         <!-- Quick Links -->
-        <div class="flex flex-col text-center md:text-left">
+        <div class="text-center sm:text-left">
           <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
           <ul class="space-y-2 text-sm">
-            <li>
-              <a href="index.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                Home
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-cream)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-            <li>
-              <a href="about.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                About
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-            <li>
-              <a href="menu.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                Menu
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-            <li>
-              <a href="contact.html" class="relative group hover:text-[color:var(--brand-cream)]">
-                Contact
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
+            <li><a href="index.html" class="relative group hover:text-[color:var(--brand-cream)]">Home
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-cream)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="about.html" class="relative group hover:text-[color:var(--brand-cream)]">About
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="menu.html" class="relative group hover:text-[color:var(--brand-cream)]">Menu
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="testimonials.html" class="relative group hover:text-[color:var(--brand-cream)]">Testimonials
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="contact.html" class="relative group hover:text-[color:var(--brand-cream)]">Contact
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
-        <div class="flex flex-col text-center md:text-left">
+        <div class="text-center sm:text-left">
           <h4 class="font-semibold text-lg mb-4">Contact</h4>
           <ul class="space-y-2 text-sm">
-            <li>
-              <a href="https://maps.app.goo.gl/2jMDuqcCCfPK1K187" target="_blank" class="relative group hover:text-[color:var(--brand-cream)]">
-                Behala, Kolkata
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:moumitasbakery@gmail.com" class="relative group hover:text-[color:var(--brand-cream)]">
-                moumitasbakery@gmail.com
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+917439688236" class="relative group hover:text-[color:var(--brand-cream)]">
-                +91 74396 88236
-                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span>
-              </a>
-            </li>
+            <li><a href="https://maps.app.goo.gl/2jMDuqcCCfPK1K187" target="_blank" class="relative group hover:text-[color:var(--brand-cream)]">
+              Behala, Kolkata
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="mailto:moumitasbakery@gmail.com" class="relative group hover:text-[color:var(--brand-cream)]">
+              moumitasbakery@gmail.com
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
+            <li><a href="tel:+917439688236" class="relative group hover:text-[color:var(--brand-cream)]">
+              +91 74396 88236
+              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[color:var(--brand-secondary)] transition-all group-hover:w-full"></span></a></li>
           </ul>
         </div>
 
         <!-- Follow Us -->
-        <div class="flex flex-col text-center md:text-left">
+        <div class="text-center sm:text-left">
           <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
-          <div class="flex gap-4 justify-center md:justify-start">
+          <div class="flex justify-center sm:justify-start gap-4">
             <a href="https://www.facebook.com/MoumitasBakery" target="_blank" class="hover:scale-110 transition-transform">
-              <img src="assets/icons/facebook.svg" alt="Facebook" class="w-10 h-10">
+              <img src="assets/icons/facebook.svg" alt="Facebook" class="w-9 h-9">
             </a>
             <a href="https://www.instagram.com/bakerybymoumita" target="_blank" class="hover:scale-110 transition-transform">
-              <img src="assets/icons/instagram.svg" alt="Instagram" class="w-10 h-10">
+              <img src="assets/icons/instagram.svg" alt="Instagram" class="w-9 h-9">
             </a>
-            <a href="https://wa.me/c/917439688236" target="_blank" class="hover:scale-110 transition-transform">
-              <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-10 h-10">
+            <a href="https://wa.me/917439688236" target="_blank" class="hover:scale-110 transition-transform">
+              <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="w-9 h-9">
             </a>
           </div>
         </div>
 
         <!-- Brand -->
-        <div class="flex flex-col items-center md:items-end text-center md:text-right">
-          <img src="assets/images/logo.jpg" alt="Moumita's Bakery logo" class="w-28 h-28 rounded-full mb-4 shadow-lg object-cover">
+        <div class="flex flex-col items-center lg:items-end text-center lg:text-right">
+          <img src="assets/images/logo.jpg" alt="Moumita's Bakery logo" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover">
           <h3 class="text-2xl font-bold mb-2">Moumita's Bakery</h3>
           <p class="text-sm opacity-80 max-w-xs">It’s Cake Time! Freshly baked goodness made with love.</p>
         </div>
@@ -246,9 +224,10 @@
 
       <!-- Bottom Bar -->
       <div class="mt-10 border-t border-[rgba(255,255,255,0.2)] pt-6 text-center text-sm opacity-90">
-        © 2025 Moumita's Bakery — All Rights Reserved. 
+        © 2025 Moumita's Bakery — All Rights Reserved.
       </div>
     </footer>
+
 
 
   </body>

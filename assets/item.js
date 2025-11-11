@@ -5,8 +5,8 @@ async function loadMenu(selectedCategory = "all cakes") {
     // Show loader while fetching
     menuGrid.innerHTML = `
       <div class="col-span-3 flex justify-center items-center py-10 flex-col">
-        <div class="w-10 h-10 border-4 border-[color:var(--brand-magenta)] border-t-transparent rounded-full animate-spin mb-3"></div>
-        <p class="text-[color:var(--brand-magenta)] font-medium">Loading menu...</p>
+        <div class="w-10 h-10 border-4 border-[color:var(--brand-primary)] border-t-transparent rounded-full animate-spin mb-3"></div>
+        <p class="text-[color:var(--brand-primary)] font-medium">Loading menu...</p>
       </div>
     `;
 
@@ -54,6 +54,7 @@ async function loadMenu(selectedCategory = "all cakes") {
         <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">${item.name}</h3>
         <p class="text-gray-600 mt-1">${item.description}</p>
         <p class="text-[color:var(--brand-primary)] mt-2 font-semibold">₹${item.price}</p>
+        <p class="text-gray-500">Pounds: ${item.pound || "1 Pound"}</p>
       `;
       menuGrid.appendChild(card);
 

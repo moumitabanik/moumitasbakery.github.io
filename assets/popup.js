@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const title = document.getElementById("modal-title");
   const desc = document.getElementById("modal-description");
   const price = document.getElementById("modal-price");
+  const pound = document.getElementById("modal-pound");
   const thumbsContainer = document.getElementById("modal-thumbnails");
   const orderBtn = document.getElementById("order-now-btn");
 
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = card.querySelector("h3").innerText;
     const description = card.querySelector("p:not(.font-semibold)").innerText;
     const priceText = card.querySelector("p.font-semibold").innerText;
+    const poundText = card.querySelector("p.text-gray-500")?.innerText || "";
 
     // All images for the cake
     const mainImg = card.querySelector("img").src;
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     title.textContent = name;
     desc.textContent = description;
     price.textContent = priceText;
+    pound.textContent = poundText;
     mainImage.src = mainImg;
 
     // Populate thumbnails

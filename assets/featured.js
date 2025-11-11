@@ -5,7 +5,7 @@ async function loadFeatured() {
     // Show loader inside the grid
     grid.innerHTML = `
       <div class="col-span-3 flex justify-center items-center py-10">
-        <div class="w-10 h-10 border-4 border-[color:var(--brand-magenta)] border-t-transparent rounded-full animate-spin"></div>
+        <div class="w-10 h-10 border-4 border-[color:var(--brand-primary)] border-t-transparent rounded-full animate-spin"></div>
       </div>
     `;
 
@@ -36,7 +36,7 @@ async function loadFeatured() {
           <img src="${imagesArray[0]}" alt="${item.name}"
             class="rounded-2xl w-full h-60 object-cover transform group-hover:scale-110 transition-transform duration-700" />
         </div>
-        <h3 class="font-semibold text-2xl text-[color:var(--brand-magenta)] mb-2 group-hover:text-[color:var(--brand-secondary)] transition-colors">
+        <h3 class="font-semibold text-2xl text-[color:var(--brand-primary)] mb-2 group-hover:text-[color:var(--brand-secondary)] transition-colors">
           ${item.name}
         </h3>
         <p class="text-gray-600 text-base">${item.description}</p>

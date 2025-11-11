@@ -11,11 +11,17 @@ body {
     background-color: var(--brand-cream);
     color: var(--brand-text);
 }
+/* Prevent unwanted horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .loader-border-4 {
   border-width: 4px;
   border-style: solid;
   border-color: transparent;
-  border-top-color: #8c1943; /* fallback for Tailwind magenta */
+  border-top-color: #8c1943; /* fallback for Tailwind primary */
 }
 /* Buttons */
 .brand-btn {
@@ -127,10 +133,10 @@ a:hover {
     color: var(--brand-primary);
 }
 /* Hide scrollbar */
-  .no-scrollbar::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
     display: none;
-  }
-  .no-scrollbar {
+}
+.no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
+}

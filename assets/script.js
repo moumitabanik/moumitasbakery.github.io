@@ -13,8 +13,8 @@ const items = document.querySelectorAll(".menu-card");
 
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    tabs.forEach(btn => btn.classList.remove("bg-[color:var(--brand-magenta)]", "text-white"));
-    tab.classList.add("bg-[color:var(--brand-magenta)]", "text-white");
+    tabs.forEach(btn => btn.classList.remove("bg-[color:var(--brand-primary)]", "text-white"));
+    tab.classList.add("bg-[color:var(--brand-primary)]", "text-white");
 
     const category = tab.dataset.category;
     items.forEach(item => {
