@@ -54,7 +54,15 @@ async function loadMenu(selectedCategory = "all cakes") {
         <h3 class="text-xl font-semibold text-[color:var(--brand-primary)]">${item.name}</h3>
         <p class="text-gray-600 mt-1">${item.description}</p>
         <p class="text-[color:var(--brand-primary)] mt-2 font-semibold">₹${item.price}</p>
-        <p class="text-gray-500">Pounds: ${item.pound || "1 Pound"}</p>
+        <p class="text-gray-500">
+          ${
+            item.pound 
+              ? `Pounds: ${item.pound}` 
+              : item.pcs 
+                ? `Pcs: ${item.pcs}` 
+                : "Pounds: 1 Pound"
+          }
+        </p>
       `;
       menuGrid.appendChild(card);
 
