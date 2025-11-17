@@ -56,13 +56,14 @@ async function loadMenu(selectedCategory = "all cakes") {
         <p class="text-[color:var(--brand-primary)] mt-2 font-semibold">₹${item.price}</p>
         <p class="text-gray-500">
           ${
-            item.pound 
-              ? `Pounds: ${item.pound}` 
-              : item.pcs 
-                ? `Pcs: ${item.pcs}` 
+            item.pound && item.pound !== "0"
+              ? `Pounds: ${item.pound}`
+              : item.pcs && item.pcs !== "0"
+                ? `Pieces: ${item.pcs}`
                 : "Pounds: 1 Pound"
           }
         </p>
+
       `;
       menuGrid.appendChild(card);
 
