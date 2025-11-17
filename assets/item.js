@@ -70,7 +70,7 @@ async function loadMenu(selectedCategory = "all cakes") {
     });
 
     // Scroll up smoothly after loading
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (err) {
     console.error("Error loading menu:", err);
     menuGrid.innerHTML = `<p class="col-span-3 text-red-500">Error loading menu. Please try again later.</p>`;
