@@ -28,7 +28,7 @@ async function loadMenu(selectedCategory = "all cakes") {
     menuGrid.innerHTML = "";
 
     if (filteredMenu.length === 0) {
-      menuGrid.innerHTML = `<p class="col-span-3 text-gray-600">No items found in this category.</p>`;
+      menuGrid.innerHTML = `<p class="col-span-3 text-gray-600 text-center">No items found in this category.</p>`;
       return;
     }
 
