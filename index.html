@@ -63,12 +63,25 @@
           <li><a href="contact.html" class="hover:text-[color:var(--brand-primary)] transition-colors">Contact</a></li>
         </ul>
       </div>
+
     </header>
+    
+    
     <!-- HERO SLIDER -->
     <section class="relative mt-16 overflow-hidden">
       <div id="slider-track" class="flex transition-transform duration-700 ease-in-out">
         
         <!-- Slide 1 -->
+        <div class="slide min-w-full h-[80vh] relative">
+          <img src="assets/images/offer3.jpg" class="w-full h-full object-cover" alt="Christmas Offer" />
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-up">
+            <h1 class="text-5xl font-bold mb-4">Christmas Special Offers</h1>
+            <p class="max-w-xl mb-6">10% OFF on all Dry Cakes on orders above ₹500</p>
+            <p class="max-w-xl mb-6">Buy 2 Christmas Cakes → Get 1 Cake FREE!</p>
+            <a href="menu.html#dry-cakes" class="brand-btn px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg">Shop Now</a>
+          </div>
+        </div>
+
         <div class="slide min-w-full h-[80vh] relative">
           <img src="assets/images/slide1.jpg" class="w-full h-full object-cover" alt="Freshly baked cakes" />
           <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6 fade-up">
@@ -101,6 +114,7 @@
       <!-- Dots -->
       <div id="slider-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10"></div>
     </section>
+
     <!-- Featured Section -->
     <section class="container mx-auto py-20 px-6 text-center">
       <h2 class="text-4xl font-extrabold text-[color:var(--brand-primary)] mb-6">Our Best Sellers</h2>
@@ -271,6 +285,37 @@
         © 2025 Moumita's Bakery — All Rights Reserved.
       </div>
     </footer>
+    <!-- 🎄 Sticky Christmas Promo Strip -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+      <a href="menu.html"
+        class="relative block w-full 
+              bg-red-700 text-center py-2 
+              text-sm md:text-base font-semibold text-white 
+              shadow-[0_-4px_12px_rgba(0,0,0,0.3)]
+              hover:bg-red-800 transition-all overflow-hidden">
+
+        <span class="tracking-wide">
+          🎄 <span class="font-extrabold text-white drop-shadow-sm">Christmas Offers:</span>
+        </span>
+
+        <span class="mx-1 font-medium">
+          <span class="text-white font-bold">10% OFF Dry Cakes</span>
+        </span>
+
+        •
+
+        <span class="mx-1 font-medium">
+          <span class="text-white font-bold">Buy 2 → Get 1 FREE</span>
+        </span>
+
+        — 
+        <span class="relative inline-block font-bold text-white ml-1 shop-now">
+          Shop Now →
+        </span>
+
+      </a>
+    </div>
+
 
   </body>
 </html>
