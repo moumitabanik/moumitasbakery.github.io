@@ -58,8 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = encodeURIComponent(
       `Hello Moumita's Bakery! 👋\nI’d like to order or know more about "${name}".`
     );
-    orderBtn.onclick = () =>
-      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    orderBtn.onclick = () => {
+      trackAndOpenWhatsApp(name, priceText);
+    };
+
+
 
     // Show modal
     modal.classList.remove("hidden");
