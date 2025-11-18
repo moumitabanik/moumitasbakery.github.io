@@ -141,12 +141,19 @@ exports.handler = async function (event, context) {
       country = "UNKNOWN";
 
     try {
-      const geo = await fetchJSON(`https://ipapi.co/${ip}/json/`);
-      if (geo) {
-        city = geo.city || "UNKNOWN";
-        region = geo.region || "UNKNOWN";
-        country = geo.country_name || "UNKNOWN";
-      }
+        async function getGeo(ip) {
+            let geo = await fetchJSON(`https://ipapi.co/${ip}/json/`);
+            if (!geo || !geo.city) {
+                geo = await fetchJSON(`https://ipwhois.app/json/${ip}`);
+            }
+            return geo;
+        }
+
+        const geo = await getGeo(ip);
+        city = geo?.city || "UNKNOWN";
+        region = geo?.region || geo?.regionName || "UNKNOWN";
+        country = geo?.country_name || geo?.country || "UNKNOWN";
+
     } catch {}
 
     // -----------------------------------------
