@@ -111,7 +111,7 @@ function fetchJSON(url) {
           try {
             resolve(JSON.parse(data));
           } catch (err) {
-            resolve(null); // avoid crash
+            resolve(null);
           }
         });
       })
@@ -124,31 +124,30 @@ exports.handler = async function (event, context) {
     const { productName, price, ref } = JSON.parse(event.body);
 
     // -----------------------------------------
-    // GET REAL USER IP
+    // GET REAL CLIENT IP
     // -----------------------------------------
-    let realIP = ip; // fallback
+    let ip =
+      event.headers["x-forwarded-for"]?.split(",")[0].trim() ||
+      event.headers["client-ip"] ||
+      "UNKNOWN";
 
-    try {
-    const ipRes = await fetchJSON("https://api64.ipify.org?format=json");
-    if (ipRes?.ip) realIP = ipRes.ip;
-    } catch {}
+    const userAgent = event.headers["user-agent"] || "UNKNOWN";
 
     // -----------------------------------------
     // GEO LOOKUP
     // -----------------------------------------
-    let city = "UNKNOWN";
-    let region = "UNKNOWN";
-    let country = "UNKNOWN";
+    let city = "UNKNOWN",
+      region = "UNKNOWN",
+      country = "UNKNOWN";
 
     try {
-    const geo = await fetchJSON(`https://ipapi.co/${realIP}/json/`);
-    if (geo) {
+      const geo = await fetchJSON(`https://ipapi.co/${ip}/json/`);
+      if (geo) {
         city = geo.city || "UNKNOWN";
         region = geo.region || "UNKNOWN";
         country = geo.country_name || "UNKNOWN";
-    }
+      }
     } catch {}
-
 
     // -----------------------------------------
     // DATABASE INSERT
@@ -164,16 +163,7 @@ exports.handler = async function (event, context) {
       `INSERT INTO whatsapp_clicks 
        (product, price, ref, ip, city, region, country, user_agent, created_at)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())`,
-      [
-        productName,
-        price,
-        ref,
-        ip,
-        city,
-        region,
-        country,
-        userAgent
-      ]
+      [productName, price, ref, ip, city, region, country, userAgent]
     );
 
     await client.end();
@@ -203,15 +193,9 @@ exports.handler = async function (event, context) {
       `,
     });
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ success: true }),
-    };
+    return { statusCode: 200, body: JSON.stringify({ success: true }) };
   } catch (err) {
     console.error("TRACKCLICK ERROR:", err);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: err.message }),
-    };
+    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 };
