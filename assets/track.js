@@ -2,8 +2,14 @@ function trackAndOpenWhatsApp(productName, price) {
   const phone = "917439688236";
   const ref = crypto.randomUUID().slice(0, 6);
 
-  // CLEAN PRICE → remove ₹ and commas
-  const cleanedPrice = Number(price.replace(/[^0-9.]/g, ""));
+    // CLEAN PRICE → remove ₹ and commas
+    let cleanedPrice;
+    if (/\d/.test(price)) {
+    cleanedPrice = Number(price.replace(/[^0-9.]/g, ""));
+    } else {
+    cleanedPrice = price; // keep placeholder as-is
+    }
+
 
   fetch('/.netlify/functions/trackclick', {
     method: "POST",
