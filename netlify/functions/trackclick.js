@@ -123,30 +123,32 @@ exports.handler = async function (event, context) {
   try {
     const { productName, price, ref } = JSON.parse(event.body);
 
-    // IP detection
-    const ip =
-      event.headers["x-forwarded-for"]?.split(",")[0] ||
-      event.headers["client-ip"] ||
-      "UNKNOWN";
+    // -----------------------------------------
+    // GET REAL USER IP
+    // -----------------------------------------
+    let realIP = ip; // fallback
 
-    const userAgent = event.headers["user-agent"] || "UNKNOWN";
+    try {
+    const ipRes = await fetchJSON("https://api64.ipify.org?format=json");
+    if (ipRes?.ip) realIP = ipRes.ip;
+    } catch {}
 
     // -----------------------------------------
-    // GEO LOOKUP (city, region, country)
+    // GEO LOOKUP
     // -----------------------------------------
     let city = "UNKNOWN";
     let region = "UNKNOWN";
     let country = "UNKNOWN";
 
-    if (ip && ip !== "UNKNOWN") {
-      const geo = await fetchJSON(`https://ipapi.co/${ip}/json/`);
-
-      if (geo) {
+    try {
+    const geo = await fetchJSON(`https://ipapi.co/${realIP}/json/`);
+    if (geo) {
         city = geo.city || "UNKNOWN";
         region = geo.region || "UNKNOWN";
         country = geo.country_name || "UNKNOWN";
-      }
     }
+    } catch {}
+
 
     // -----------------------------------------
     // DATABASE INSERT
