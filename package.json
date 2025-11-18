@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "nodemailer": "^7.0.10",
-    "pg": "^8.16.3"
+    "pg": "^8.16.3",
+    "resend": "^6.5.0"
   }
 }
